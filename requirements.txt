@@ -1,0 +1,5 @@
+# tensorflow
+numpy
+pylint
+setuptools
+absl-py
