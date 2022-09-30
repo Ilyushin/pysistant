@@ -72,7 +72,7 @@ def clock():
 
 
 class Timer:
-    def __init__(self, granularity):
+    def __init__(self, granularity='s'):
         """
         :param granularity: can be s - seconds, m - minutes, h - hours
         :return:
