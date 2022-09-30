@@ -71,7 +71,7 @@ def clock():
         return time.clock()  # Python 2
 
 
-class Timer(object):
+class Timer:
     def __int__(self, granularity='s'):
         """
         :param granularity: can be s - seconds, m - minutes, h - hours
