@@ -72,13 +72,15 @@ def clock():
 
 
 class Timer(object):
-    # Begin of `with` block
-    def __enter__(self, granularity='s'):
-        '''
-        :param granularity: can be s - seconds, m - minuts, h - hours
+    def __int__(self, granularity='s'):
+        """
+        :param granularity: can be s - seconds, m - minutes, h - hours
         :return:
-        '''
+        """
         self.granularity = granularity
+
+    # Begin of `with` block
+    def __enter__(self):
         self.start_time = clock()
         self.end_time = None
         return self
@@ -112,5 +114,3 @@ def run_cmd(args_list):
     s_return = proc.returncode
 
     return s_return, s_output, s_err
-
-
