@@ -81,8 +81,14 @@ class Timer:
 
     # Begin of `with` block
     def __enter__(self):
-        self.start_time = clock()
+        if self.granularity == 'm':
+            self.start_time = clock() / 60
+        elif self.granularity == 'h':
+            self.start_time = (clock() / 60) / 60
+        else:
+            self.start_time = clock()
         self.end_time = None
+
         return self
 
     # End of `with` block
