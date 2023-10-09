@@ -109,13 +109,13 @@ class Timer:
             return self.end_time - self.start_time
 
 
-def run_cmd(args_list: list, env: dict = None):
+def run_cmd(args_list: list, env: dict = None, shell: bool = False):
     """
     Run linux commands.
     """
     # import subprocess
     print('Running system command: {0}'.format(' '.join(args_list)))
-    proc = subprocess.Popen(args_list, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    proc = subprocess.Popen(args_list, env=env, shell=shell, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     s_output, s_err = proc.communicate()
     s_return = proc.returncode
 
