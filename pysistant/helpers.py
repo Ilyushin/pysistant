@@ -109,7 +109,7 @@ class Timer:
             return self.end_time - self.start_time
 
 
-def run_cmd(args_list: list, env: dict = None, shell: bool = False):
+def run_cmd(args_list: [list, str], env: dict = None, shell: bool = False):
     """
     Run linux commands.
     """

@@ -10,7 +10,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="pysistant",
-    version="1.0.6",
+    version="1.0.8",
     author="Eugene Ilyushin",
     author_email="eugene.ilyushin@gmail.com",
     description="The package contains different helpers for speeding up programming on Python.",
